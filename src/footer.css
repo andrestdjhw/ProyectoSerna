@@ -1,0 +1,50 @@
+footer {
+    background-color: #87CEDE; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    padding: 50px 0; /* Establece el relleno */
+}
+
+.footer-container {
+    max-width: 4056px; /* Establece el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex; /* Establece la visualización como flexbox */
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+}
+
+.footer-column {
+    flex: 1; /* Establece la flexibilidad */
+    margin-right: 20px; /* Establece el margen derecho */
+}
+
+.footer-column h3 {
+    font-size: 1.3rem; /* Establece el tamaño de fuente */
+    margin-bottom: 20px; /* Establece el margen inferior */
+}
+
+.footer-column p {
+    margin-bottom: 10px; /* Establece el margen inferior */
+}
+
+.footer-column ul {
+    list-style: none; /* Elimina los marcadores de lista */
+    padding: 0; /* Elimina el relleno */
+}
+
+.footer-column ul li {
+    margin-bottom: 0; /* Establece el margen inferior */
+}
+
+.footer-column ul li a {
+    color: #fff; /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración de texto subrayado */
+}
+
+.footer-column ul li a:hover {
+    color: #EE3725; /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Estilos para el aviso de derechos de autor */
+.copyright {
+    margin-top: 20px; /* Establece el margen superior */
+    text-align: center; /* Alinea el texto al centro */
+}

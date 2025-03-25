@@ -1,19 +1,89 @@
+// Variabless
+@max-width: 4056px;
+@column-margin: 20px;
+@mobile-breakpoint: 768px; // Breakpoint for tablets/mobiles
+
+// Mixin for responsive transitions
+.responsive-transition() {
+  transition: all 0.3s ease;
+}
+
+// Footer Styles
 footer {
-    background-color:@secondary-bg-color;
-    color: @primary-text-color;
-    padding: @footer-padding;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    color: @primary-text-color;
+  background-color: @primary-color;
+  color: @primary-text-color;
+  padding: 50px 0;
 
-    a {
-        color: @default-link-color;
-        text-decoration: none;
+  .footer-container {
+    max-width: @max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; // Allow columns to wrap on small screens
 
-        &:hover {
-            text-decoration: underline;
-        }
+    // Responsive: Stack columns vertically on mobile
+    @media (max-width: @mobile-breakpoint) {
+      flex-direction: column;
+      padding: 0 15px; // Add side padding
     }
+
+    .footer-column {
+      flex: 1;
+      margin-right: @column-margin;
+      min-width: 200px; // Prevent columns from becoming too narrow
+
+      // Remove margin for last column
+      &:last-child {
+        margin-right: 0;
+      }
+
+      // Responsive: Full width + centered text on mobile
+      @media (max-width: @mobile-breakpoint) {
+        flex: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: @column-margin;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 8px;
+
+          a {
+            color: @primary-text-color;
+            text-decoration: none;
+            .responsive-transition(); // Smooth hover effect
+
+            &:hover {
+              color: @naranja-serna;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: @column-margin;
+    text-align: center;
+    font-size: 0.9rem; // Smaller text for copyright
+
+    // Responsive: Adjust spacing on mobile
+    @media (max-width: @mobile-breakpoint) {
+      margin-top: 15px;
+      padding: 0 15px;
+    }
+  }
 }
