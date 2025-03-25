@@ -1,0 +1,29 @@
+<header>
+  <img src="/src/img/logo_serna.png" alt="Logo de SERNA" class="brand-logo">
+  <h1>Secretaria de Recursos Naturales y Ambiente</h1>
+</header>
+
+<nav>
+  <div class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div class="nav-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#webmail">Webmail</a>
+    <a href="#licambient">Licenciamiento Ambiental</a>
+    <a href="#direcciones">Direcciones</a>
+    <a href="#regionales">Regionales</a>
+    <a href="#ocp">OCP</a>
+    <a href="#portales">Portales</a>
+  </div>
+</nav>
+
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', function () {
+    this.classList.toggle('active');
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+</script>

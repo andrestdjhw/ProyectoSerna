@@ -1,0 +1,13 @@
+# Ignorar archivos de log
+*.log
+
+# Ignorar la carpeta node_modules (común en proyectos JavaScript)
+node_modules/
+
+# Ignorar archivos de configuración local
+.env
+.DS_Store  # Archivo de macOS
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
