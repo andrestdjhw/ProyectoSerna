@@ -28,7 +28,6 @@ nav {
   flex-direction: column; // Adecua elementos verticalmente en dispositivos moviles
   background-image: linear-gradient(to bottom, @third-color, @secondary-color);
   padding: 10px 20px;
-  position: relative;
 
   //Menu de Hamburguesa (mobile only)
   .menu-toggle {
@@ -53,6 +52,85 @@ nav {
     }
     &.active .bar:nth-child(3) {
       transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+
+  .search-toggle {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto; // Pushes to right
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+      fill: @primary-text-color;
+    }
+
+    @media (min-width: 768px) {
+      display: none; // Hide icon on desktop
+    }
+  }
+
+  .search-container {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    
+    input[type="search"] {
+      width: 100%;
+      padding: 8px 15px;
+      border: 1px solid @default-background;
+      border-radius: 20px;
+      background: @default-background;
+      color: @text-color;
+      
+      &::placeholder {
+        color: fade(@text-color, 70%);
+      }
+    }
+
+    &.active {
+      display: block; // Show when toggled
+    }
+  }
+
+  // Search toggle button (mobile only)
+  .search-toggle {
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-left: auto; // Push to right side
+    cursor: pointer;
+    
+    .search-icon {
+      width: 24px;
+      height: 24px;
+      fill: @default-background;
+    }
+    
+    @media (min-width: 768px) {
+      display: none; // Hide on desktop
+    }
+  }
+
+  // Desktop styles
+  @media (min-width: 768px) {
+    .search-container {
+      display: block !important;
+      width: 200px;
+      padding: 0;
+      margin-left: 20px;
+      
+      input {
+        width: 100%;
+        transition: width 0.3s;
+        
+        &:focus {
+          width: 250px;
+        }
+      }
     }
   }
 
