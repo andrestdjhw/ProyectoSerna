@@ -7,31 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plantilla de Ejemplo SERNA</title> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="src/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="less/main.less" />
 </head>
 
 <body>
 
   {{>header}}
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <div class="carousel-container">
+    <i class="fa fa-arrow-circle-right" aria-hidden="true" id="nextBtn"></i>
+    <i class="fa fa-arrow-circle-left" aria-hidden="true" id="prevBtn"></i>
+    <div class="carousel-slide">
+      <img src="https://picsum.photos/id/18/1440/550" id="lastClone" alt="">
+      <img src="https://picsum.photos/id/15/1440/500" alt="Imagen 1">
+      <img src="https://picsum.photos/id/16/1440/500" alt="Imagen 2">
+      <img src="https://picsum.photos/id/17/1440/500" alt="Imagen 3">
+      <img src="https://picsum.photos/id/18/1440/500" alt="Imagen 4">
+      <img src="https://picsum.photos/id/15/1440/500" id="firstClone" alt="">
+    </div>
+  </div>
+  
   <br>
   <br>
   {{>footer}}
-
+  <script src="carousel.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
 </body>
 
